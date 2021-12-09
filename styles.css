@@ -1,0 +1,859 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+/* This removes the white space that mobile views create  */
+@media only screen and (max-width: 768px) {
+  html,
+  body {
+    overflow-x: hidden;
+  }
+}
+/* ------------------------------------------------- (Header) Landing Page Section */
+
+.landing-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 644px;
+  /* background: url('images/header\ bg.png'); */
+  background: url('https://i.imgur.com/x07N911.png');
+
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+/* -------- Original Nav bar + Nav Menu */
+.landing-page nav {
+  display: flex;
+  justify-content: space-between;
+  width: 940px;
+  height: 121px;
+}
+
+.main-icon,
+.nav-stack {
+  cursor: pointer;
+}
+
+.nav-stack {
+  width: 28px;
+  height: 22px;
+  top: 50%;
+  transform: translateY(-50%);
+  position: relative;
+  opacity: 1;
+  transition: 0.3s all ease-in-out;
+}
+
+.nav-stack.hide {
+  opacity: 0;
+  transition: 0.3s all ease-in-out;
+}
+
+/* -------- Nav Menu NOT ACTIVE / ACTIVE  */
+.nav-menu {
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  background-color: #e57f85;
+  transition: opacity 0.3s ease-in-out;
+  pointer-events: none;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-menu.active {
+  opacity: 0.94;
+  z-index: 1;
+  transition: opacity 0.3s ease-in-out;
+  pointer-events: visible;
+}
+
+.nav-items {
+  display: flex;
+  justify-content: space-between;
+  height: 644px;
+}
+.nav-stack {
+  display: flex;
+}
+.close {
+  display: none;
+}
+.close.active {
+  display: flex;
+  cursor: pointer;
+  width: 25px;
+  height: 25px;
+  top: 50%;
+  transform: translateY(-50%);
+  position: relative;
+  z-index: 5;
+}
+
+.nav-bar-items {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  left: 48%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.single {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+.single h4 {
+  margin-left: 8px;
+  font-style: italic;
+  color: white;
+}
+.single:hover {
+  transform: scale(1.03);
+}
+
+.single:active {
+  transform: scale(1);
+}
+
+/* -------- Main body , buttons and phone */
+
+.main-body {
+  margin-top: 70px;
+  height: 263px;
+  width: 940px;
+}
+
+.main-body h1 {
+  font-size: 55px;
+  text-align: right;
+  color: white;
+}
+
+.main-body h1 em {
+  font-size: 37px;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.main-body h1 i {
+  font-weight: 900;
+}
+
+.main-body button {
+  width: 174px;
+  height: 57px;
+  border: 2.5px solid white;
+  background: none;
+  transition: 0.1s all ease-in-out;
+  float: right;
+  margin-top: 38px;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: white;
+  transition: all 0.2s ease-in-out;
+}
+
+.main-body button i {
+  margin-left: 10px;
+}
+
+.main-body button:hover {
+  transition: all 0.2s ease-in-out;
+  color: rgb(0, 0, 0);
+  border: 2.5px solid black;
+}
+
+.main-body button:active {
+  background: rgba(49, 49, 49, 0.2);
+  transform: translateY(2px);
+}
+
+.phone {
+  margin-left: 69px;
+  margin-top: 70px;
+}
+
+.phone:hover {
+  transform: scale(1.01);
+}
+
+@media screen and (min-width: 600px) and (max-width: 1155px) {
+  .landing-page nav {
+    width: 81.5%;
+  }
+
+  .main-body h1 {
+    font-size: 40px;
+  }
+  .main-body h1 em {
+    font-size: 25px;
+  }
+
+  .main-body {
+    width: 90%;
+  }
+
+  .main-body button {
+    width: 165px;
+    height: 50px;
+    letter-spacing: 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .landing-page nav {
+    width: 81.5%;
+  }
+
+  .main-body h1 {
+    font-size: 35px;
+  }
+  .main-body h1 em {
+    font-size: 25px;
+  }
+
+  .main-body {
+    margin-top: 30px;
+    width: 80%;
+  }
+
+  .main-body button {
+    width: 165px;
+    height: 50px;
+    letter-spacing: 0;
+    margin-top: 25px;
+  }
+
+  .phone {
+    margin-left: 41px;
+    margin-top: 30px;
+  }
+}
+
+/* ------------------------------------------------- (About me) Content body */
+.about-me {
+  height: 644px;
+  background-color: #f7f7f7;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-me .left-section {
+  width: 570px;
+}
+
+.about-me .left-section h1 {
+  margin-bottom: 30px;
+  font-weight: 200;
+  font-size: 40px;
+}
+
+.about-me .left-section h4 {
+  margin-bottom: 30px;
+  font-weight: 200;
+  opacity: 0.5;
+}
+
+.about-me .left-section p {
+  margin-bottom: 60px;
+  opacity: 0.5;
+  font-size: 18px;
+  font-style: italic;
+}
+
+.about-me .bottom-section {
+  /* Paragraph divider */
+  display: flex;
+  justify-content: flex-start;
+}
+
+.dash {
+  height: 68px;
+  width: 15px;
+  background-color: #4eacdd;
+  margin-right: 17px;
+}
+
+.about-me .right-section {
+  margin-left: 80px;
+}
+
+.about-me button {
+  width: 174px;
+  height: 57px;
+  border: 2.5px solid rgb(0, 216, 0);
+  background: none;
+  transition: 0.1s all ease-in-out;
+  float: left;
+  margin-top: 33px;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: rgb(0, 216, 0);
+  transition: all 0.2s ease-in-out;
+}
+
+.about-me button i {
+  margin-left: 10px;
+}
+
+.about-me button:hover {
+  transition: all 0.2s ease-in-out;
+  color: rgb(0, 0, 0);
+  border: 2.5px solid black;
+}
+
+.about-me button:active {
+  background: rgba(49, 49, 49, 0.2);
+  transform: translateY(2px);
+}
+
+.ipad:hover {
+  transform: scale(1.01);
+}
+
+.ipad {
+  width: 380px;
+}
+
+@media screen and (min-width: 600px) and (max-width: 1050px) {
+  .ipad {
+    width: 300px;
+    margin-right: 20px;
+  }
+
+  .about-me .left-section {
+    width: 46%;
+    margin-left: 10px;
+  }
+
+  .about-me .left-section h4 {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+
+  .about-me .left-section p {
+    font-size: 16px;
+    margin-bottom: 0;
+  }
+
+  .about-me .right-section {
+    margin-left: 15px;
+  }
+
+  .about-me button {
+    width: 165px;
+    height: 50px;
+    letter-spacing: 0;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .about-me .left-section p {
+    font-size: 14px;
+    margin-bottom: 0;
+  }
+
+  .ipad {
+    width: 240px;
+  }
+
+  .about-me .left-section {
+    margin-left: 10px;
+  }
+
+  .about-me button {
+    width: 165px;
+    height: 50px;
+    letter-spacing: 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .about-me {
+    flex-direction: column;
+    height: 800px;
+  }
+
+  .about-me .left-section {
+    margin-left: 0;
+  }
+
+  .about-me .left-section {
+    width: 310px;
+  }
+
+  .about-me .right-section {
+    margin-left: 0;
+  }
+
+  .about-me .left-section h1 {
+    font-size: 35px;
+    margin-bottom: 15px;
+  }
+  .about-me .left-section h4 {
+    font-size: 15px;
+    margin-bottom: 20px;
+  }
+
+  .about-me .right-section .ipad {
+    width: 275px;
+    margin-top: 30px;
+  }
+}
+
+/* ------------------------------------------------- (Portfolio) Content body */
+.portfolio {
+  height: 644px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+}
+
+.portfolio-container {
+  width: 1250px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  position: relative;
+}
+
+.portfolio .right-section {
+  margin-top: 90px;
+  margin-right: 165px;
+  width: 400px;
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+.portfolio .right-section h1 {
+  font-weight: 200;
+  font-size: 36px;
+  margin-bottom: 25px;
+}
+
+.portfolio .right-section h4 {
+  margin-bottom: 25px;
+  font-style: italic;
+}
+
+.portfolio .right-section p {
+  margin-bottom: 55px;
+}
+
+.portfolio .left-section {
+  margin-right: 122px;
+}
+
+.device-imac {
+  position: absolute;
+  left: 105px;
+  bottom: -30px;
+}
+
+.device-imac:hover {
+  transform: scale(1.02);
+}
+
+.device-mini {
+  position: absolute;
+  left: 645px;
+  bottom: -30px;
+}
+
+.device-mini:hover {
+  transform: scale(1.02);
+}
+
+.device-ipad {
+  position: absolute;
+  left: 460px;
+  bottom: -30px;
+}
+
+.device-ipad:hover {
+  transform: scale(1.02);
+}
+.device-iphone {
+  position: absolute;
+  left: 600px;
+  bottom: -50px;
+}
+
+.device-iphone:hover {
+  transform: scale(1.02);
+}
+
+.device-macbook {
+  left: -80px;
+  position: absolute;
+  bottom: -30px;
+}
+
+.device-macbook:hover {
+  transform: scale(1.02);
+}
+
+.right-section button {
+  width: 225px;
+  height: 57px;
+  border: 2.5px solid rgb(255, 121, 121);
+  background: none;
+  transition: 0.1s all ease-in-out;
+  float: left;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: rgb(255, 121, 121);
+  transition: all 0.2s ease-in-out;
+}
+
+.right-section button i {
+  margin-left: 10px;
+}
+
+.right-section button:hover {
+  transition: all 0.2s ease-in-out;
+  color: rgb(0, 0, 0);
+  border: 2.5px solid black;
+}
+
+.right-section button:active {
+  background: rgba(49, 49, 49, 0.2);
+  transform: translateY(2px);
+}
+
+@media screen and (min-width: 600px) and (max-width: 1155px) {
+  .device-imac {
+    bottom: -115px;
+  }
+
+  .device-mini {
+    bottom: -40px;
+  }
+
+  .device-ipad {
+    bottom: -60px;
+  }
+
+  .device-iphone {
+    bottom: -75px;
+  }
+  .portfolio .right-section {
+    margin-right: 25px;
+    width: 390px;
+  }
+
+  .portfolio .right-section h1 {
+    font-size: 30px;
+    margin-bottom: 15px;
+  }
+
+  .portfolio .right-section p {
+    font-size: 15px;
+    margin-bottom: 25px;
+  }
+  .right-section button {
+    width: 210px;
+    height: 50px;
+    letter-spacing: 0;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .device-imac {
+    left: -65px;
+  }
+
+  .device-mini {
+    left: 465px;
+  }
+
+  .device-ipad {
+    left: 280px;
+  }
+
+  .device-iphone {
+    left: 422px;
+  }
+
+  .device-macbook {
+    left: -230px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .portfolio .right-section {
+    margin-right: 50px;
+    width: 75%;
+  }
+
+  .portfolio .right-section h1 {
+    font-size: 32px;
+  }
+
+  .portfolio .right-section h4 {
+    font-size: 18px;
+  }
+
+  .portfolio .right-section p {
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+  .device-imac {
+    display: none;
+  }
+
+  .device-macbook {
+    display: none;
+  }
+
+  .device-mini {
+    left: 232px;
+  }
+
+  .device-ipad {
+    left: 29px;
+  }
+
+  .device-iphone {
+    left: 181px;
+  }
+}
+
+/* ------------------------------------------------- (About-me) Content body */
+.donate {
+  height: 358px;
+  position: relative;
+  z-index: 2;
+  background-color: #13c1ac;
+  display: flex;
+  justify-content: center;
+  /* background-image: url('images/bg.png'); */
+  background-image: url('https://i.imgur.com/dND90WR.png');
+}
+
+.main-donate-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-donate-body h1 {
+  font-size: 40px;
+  color: white;
+  margin-bottom: 41px;
+}
+
+.main-donate-body button {
+  width: 222px;
+  height: 57px;
+  border: 2.5px solid white;
+  background: none;
+  transition: 0.1s all ease-in-out;
+  float: right;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: white;
+  transition: all 0.2s ease-in-out;
+}
+
+.main-donate-body button i {
+  margin-left: 10px;
+}
+
+.main-donate-body button em {
+  font-weight: 800;
+}
+
+.main-donate-body button:hover {
+  transition: all 0.2s ease-in-out;
+  color: rgb(0, 0, 0);
+  border: 2.5px solid black;
+}
+
+.main-donate-body button:active {
+  background: rgba(49, 49, 49, 0.2);
+  transform: translateY(2px);
+}
+
+@media screen and (max-width: 600px) {
+  .main-donate-body h1 {
+    font-size: 30px;
+    margin-bottom: 35px;
+  }
+  .main-donate-body button {
+    width: 200px;
+    height: 50px;
+  }
+
+  .donate {
+    height: 280px;
+  }
+}
+/* ------------------------------------------------- (Sign-up) Content Body */
+
+.sign-up-form {
+  height: 550px;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.sign-up-body {
+  width: 469px;
+  height: 212px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.sign-up-buttons i {
+  font-size: 18px;
+  color: rgb(114, 114, 114);
+}
+.sign-up-buttons button {
+  cursor: pointer;
+  width: 56px;
+  height: 56px;
+  margin-left: 36px;
+  margin-bottom: 50px;
+  border: 3px solid rgb(114, 114, 114);
+  border-radius: 50%;
+}
+
+.sign-up-buttons button:hover {
+  transition: all 0.2s ease-in-out;
+  border: 3px solid #13c1ac;
+}
+
+.sign-up-buttons button:active {
+  transform: translateY(3px);
+}
+
+.signup {
+  display: flex;
+  align-items: center;
+}
+
+.signup h5 {
+  margin-right: 26px;
+  font-style: italic;
+  opacity: 0.6;
+}
+
+.signup input {
+  border: none;
+  width: 250px;
+  height: 41px;
+  border-radius: 10px;
+}
+
+.signup input::placeholder {
+  font-style: italic;
+  font-weight: 800;
+  opacity: 0.4;
+}
+
+input[type='email'] {
+  padding-left: 20px;
+  /* background-image: url('images/Email-signup/Group\ 1.png'); */
+  background-image: url('https://i.imgur.com/2PBEUS2.png');
+  background-position: 90% 50%;
+  background-repeat: no-repeat;
+}
+
+input[type='email']:focus {
+  padding-left: 20px;
+  background-image: none;
+}
+
+@media screen and (max-width: 600px) {
+  .signup {
+    flex-direction: column;
+  }
+
+  .sign-up-buttons button {
+    margin-left: 22px;
+  }
+
+  .signup h5 {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .sign-up-form {
+    height: 400px;
+  }
+}
+/* ------------------------------------------------- Footer */
+
+footer {
+  height: 120px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer p {
+  font-size: 14px;
+}
+
+footer button {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  border: none;
+  position: absolute;
+  right: 57px;
+  cursor: pointer;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+footer button:hover {
+  transform: scale(1.05);
+}
+
+footer button:active {
+  transform: scale(0.99);
+}
+
+@media screen and (max-width: 600px) {
+  footer p {
+    font-size: 12px;
+    position: relative;
+    left: -15px;
+  }
+
+  footer button {
+    right: 25px;
+  }
+}
