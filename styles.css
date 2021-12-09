@@ -18,8 +18,7 @@
   align-items: center;
   height: 644px;
   /* background: url('images/header\ bg.png'); */
-  background: url('https://i.imgur.com/dND90WR.png');
-
+  background: url('https://i.imgur.com/koKdSis.png');
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -386,7 +385,7 @@
 @media screen and (max-width: 600px) {
   .about-me {
     flex-direction: column;
-    height: 800px;
+    height: 850px;
   }
 
   .about-me .left-section {
